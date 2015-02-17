@@ -1,0 +1,53 @@
+@import 'include/includes.less';
+
+.hero {
+	margin-bottom: 20px;
+	background-image: url('../img/hero.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	.ciutadella;
+	color: @white;
+	.letter-spacing(60);
+	padding-top: 20px;
+	padding-bottom: 50px;
+
+	@media screen and (min-width: @screen-sm-min) {
+		padding-top: 210px;
+		padding-bottom: 80px;
+	}
+}
+
+.hero-inner {
+	.make-sm-column-offset(1);
+}
+
+.hero-heading {
+	font-size: 20px;
+	line-height: 1;
+	margin-bottom: 50px;
+
+	@media screen and (min-width: @screen-sm-min) {
+		margin-bottom: 20px;
+	}
+}
+
+.hero-subheading {
+	line-height: .9;
+	font-size: 30px;
+	margin-bottom: 30px;
+
+	@media screen and (min-width: @screen-sm-min) {
+		font-size: 60px;
+	}
+
+	@media screen and (min-width: @screen-md-min) {
+		font-size: 90px;
+		margin-bottom: 55px;
+	}
+}
+
+.btn-hero {
+	color: @white;
+	border-color: @white;
+}

@@ -1,0 +1,156 @@
+@import 'include/includes.less';
+
+.site-header {
+	position: absolute;
+	top: 20px;
+	right: 20px;
+	left: 20px;
+}
+
+.header-menu {
+	display: none;
+	background-color: @white;
+
+	@media screen and (min-width: @screen-sm-min) {
+		display: block !important; // to override js display none on slideUp() (if they happened to close menu on narrow and then widen screen)
+		background-color: transparent;
+		float: right;
+		padding-top: 20px;
+		padding-right: 20px;
+	}
+}
+
+.nav-toggle {
+	border: none;
+	border-radius: 0;
+	background: 0;
+	margin: 0;
+	padding: 20px;
+	.square(60px);
+	float: none;
+	position: absolute;
+	right: 0;
+	z-index: 1;
+
+	.hamburger {
+		position: relative;
+		width: 100%;
+		height: 100%;
+	}
+
+	.hamburger-bar {
+		background-color: @black;
+		.size(20px, 3px);
+		position: absolute;
+		top: 8px;
+		left: 0;
+		.transition(~"all .3s ease, background-color 0s");
+
+		&:first-of-type {
+			.transform(rotate(45deg));
+		}
+
+		&:nth-of-type(2) {
+			opacity: 0;
+		}
+
+		&:last-of-type {
+			.transform(rotate(-45deg));
+		}
+	}
+
+	&.collapsed {
+		.hamburger-bar {
+			.transform(rotate(0));
+			opacity: 1;
+			background-color: @white;
+
+			&:first-of-type {
+				top: 0;
+			}
+
+			&:nth-of-type(2) {
+				top: 8px;
+			}
+
+			&:last-of-type {
+				top: 16px;
+			}
+		}
+	}
+
+	@media screen and (min-width: @screen-sm-min) {
+		display: none;
+	}
+}
+
+.nav-header {
+	.ciutadella;
+	font-weight: 600;
+	font-size: 15px;
+	line-height: 1;
+	.letter-spacing(60);
+	text-transform: uppercase;
+	margin: 0;
+	padding: 0;
+
+	@media screen and (min-width: @screen-sm-min) {
+		display: block;
+	}
+
+	& > li {
+		list-style: none;
+		display: block;
+
+		@media screen and (min-width: @screen-sm-min) {
+			float: left;
+		}
+
+		& > a {
+			display: block;
+			color: @black;
+			padding: 22px 31px;
+			position: relative;
+
+			@media screen and (min-width: @screen-sm-min) {
+				color: @white;
+			}
+
+			&:before {
+				content: '';
+				width: 26px;
+				height: 1px;
+				background-color: @white;
+				position: absolute;
+				top: 9px;
+				left: 50%;
+				margin-left: -13px;
+				display: none;
+			}
+
+			&:hover,
+			&:focus {
+				text-decoration: none;
+
+				&:before {
+					display: block;
+				}
+			}
+		}
+	}
+
+	& > .menu-contact {
+		& > a {
+			@media screen and (min-width: @screen-sm-min) {
+				color: @black;
+				background-color: @white;
+
+				&:hover,
+				&:focus {
+					background-color: transparent;
+					color: @white;
+				}
+			}
+		}
+	}
+}

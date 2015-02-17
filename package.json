@@ -1,0 +1,24 @@
+{
+  "name": "acme-digital",
+  "version": "1.0.1",
+  "author": "Scott Blinch <scblinch@gmail.com>",
+  "homepage": "",
+  "description": "ACME Digital Home Page",
+  "main": "Gruntfile.js",
+  "directories": {
+    "test": "tests"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "engines": {
+    "node": ">= 0.10.32"
+  },
+  "dependencies": {
+    "grunt": "~0.4.5",
+    "grunt-contrib-watch": "~0.6.1",
+    "grunt-contrib-less": "~0.11.0",
+    "grunt-newer": "~0.6.1"
+  }
+}

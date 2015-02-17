@@ -1,0 +1,50 @@
+@import 'include/includes.less';
+
+.testimonial {
+	background-image: url('../img/bg-testimonial.jpg');
+	background-repeat: no-repeat;
+	background-size: cover;
+	background-position: center center;
+	text-align: center;
+	margin-left: -20px;
+	margin-right: -20px;
+	padding-top: 50px;
+	padding-bottom: 50px;
+
+	@media screen and (min-width: @screen-sm-min) {
+		padding-top: 280px;
+		padding-bottom: 200px;
+	}
+
+	h2 {
+		.sr-only();
+	}
+}
+
+.testimonial-inner {
+	max-width: 900px;
+	margin: 0 auto;
+}
+
+.testimonial-quote {
+	.ciutadella;
+	line-height: 1;
+	.letter-spacing(10);
+	color: @white;
+	margin-bottom: 50px;
+	font-size: 30px;
+	font-weight: 300;
+
+	@media screen and (min-width: @screen-sm-min) {
+		font-size: 60px;
+	}
+}
+
+.testimonial-author {
+	.ciutadella;
+	font-size: 20px;
+	line-height: 1;
+	.letter-spacing(50);
+	color: #777;
+	text-transform: uppercase;
+}
